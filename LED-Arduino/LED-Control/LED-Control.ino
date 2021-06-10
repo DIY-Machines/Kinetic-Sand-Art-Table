@@ -1,6 +1,6 @@
 
 /*
-  Designed for DIY MAchines Kinetic Sand Project and based on code originally written by Keith Lord 
+  Designed for DIY Machines Kinetic Sand Project and based on code originally written by Keith Lord 
   
 You will need to install the WS2812FX library which can be found here: https://github.com/kitesurfer1404/WS2812FX
 
@@ -34,6 +34,7 @@ You will need to install the WS2812FX library which can be found here: https://g
 #define LED_PIN    6  // digital pin used to drive the LED strip
 #define LED_COUNT 70  // number of LEDs on the strip - if you make a larger table with more LED's then adjust this number
 
+int maximumBrightnesAllowed = 128;  // set this value the maximum brightness you want to allow the LEDs to reach (0 -> 255)
 const byte interruptPin = 2;
 const byte potBrightness = A0;
 const byte potSpeed = A2;
@@ -188,7 +189,7 @@ void loop() {
 
   unsigned long check_time = millis();
   
-  if (check_time - last_check_time > 200){                              // If checks come faster than 300ms, assume it's a bounce and ignore
+  if (check_time - last_check_time > 200){                              // If checks come faster than 200ms, assume it is a bounce and ignore
 
 
       // read the input on the potentiometer to determine the requested brightness for the LEDs
@@ -203,7 +204,7 @@ void loop() {
     }
   
     averageBrightness = totalBrightness / numReadings;                    // calculate the average:
-    int ledValueBrightness = map(averageBrightness, -47, 900, 0, 128);    // Map the brightness value to range of LEDs 
+    int ledValueBrightness = map(averageBrightness, -47, 900, 0, maximumBrightnesAllowed);    // Map the brightness value to range of LEDs 
     //Serial.print("Brightness of LEDs is set to ");
     //Serial.println(ledValueBrightness);
     tableSurfaceLEDs.setBrightness(ledValueBrightness);                 //set the table LEDs brightness value
