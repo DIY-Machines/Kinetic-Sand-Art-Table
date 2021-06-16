@@ -1,6 +1,6 @@
 
 /*
-  Designed for DIY Machines Kinetic Sand Project and based on code originally written by Keith Lord 
+  Designed for DIY MAchines Kinetic Sand Project and based on code originally written by Keith Lord 
   
 You will need to install the WS2812FX library which can be found here: https://github.com/kitesurfer1404/WS2812FX
 
@@ -75,7 +75,7 @@ void patternMode() {
  if (interrupt_time - last_interrupt_time > 400)    // If interrupts come faster than 400ms, assume it's a bounce and ignore
  {
   
-  if (patternNumber == 9) {  
+  if (patternNumber == 10) {  
     patternNumber = 0;
   }
   else {
@@ -113,6 +113,9 @@ void patternMode() {
     break;
     case 9:
     pattern9();
+    break;
+    case 10:
+    pattern10();
     break;
    }
 
@@ -183,13 +186,20 @@ void pattern3() {
   tableSurfaceLEDs .setMode(FX_MODE_FIRE_FLICKER_SOFT);
   tableSurfaceLEDs.setColor(ORANGE);
   tableSurfaceLEDs.start();}
+
+
+           void pattern10() {
+
+  tableSurfaceLEDs .setMode(FX_MODE_STATIC);
+  tableSurfaceLEDs.setColor(WHITE);
+  tableSurfaceLEDs.start();}
   
 void loop() {
   tableSurfaceLEDs.service();
 
   unsigned long check_time = millis();
   
-  if (check_time - last_check_time > 200){                              // If checks come faster than 200ms, assume it is a bounce and ignore
+  if (check_time - last_check_time > 200){                              // If checks come faster than 300ms, assume it's a bounce and ignore
 
 
       // read the input on the potentiometer to determine the requested brightness for the LEDs
@@ -210,9 +220,9 @@ void loop() {
     tableSurfaceLEDs.setBrightness(ledValueBrightness);                 //set the table LEDs brightness value
     
     int potValueSpeed = analogRead(potSpeed);                           // read the input on analog pin 2 to determine the speed for the LED patterns
-    long ledValueSpeed = map(potValueSpeed, 0, 670, 0, 100000);         // read the input on the potentiometer to determine the requested speed for the LEDs
+    long ledValueSpeed = map(potValueSpeed, 0, 1100, 0, 100000);         // read the input on the potentiometer to determine the requested speed for the LEDs
     //Serial.print("Speed of LED pattern set to ");
-    Serial.println(ledValueSpeed);
+    //Serial.println(ledValueSpeed);
     tableSurfaceLEDs.setSpeed(ledValueSpeed);                           //set the table LEDs pattern speed
     
     last_check_time = check_time;
