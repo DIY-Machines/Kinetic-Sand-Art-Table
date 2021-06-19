@@ -13,7 +13,7 @@
 ; File name: 'Spiralling Squares'
 ;
 ; BEGIN PRE
-g1 f200
+g1 f2000
 ; END PRE
 
 G01 X269.571 Y172.071
