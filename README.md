@@ -1,12 +1,17 @@
 ### DIY Machines Kinetic Sand Table Project - https://youtu.be/Lng_AsmfBfU
+
+https://www.diymachines.co.uk/kinetic-sand-art-coffee-table-self-drawing
+
 ![DIYM Logo](https://lirp.cdn-website.com/65e30418/dms3rep/multi/opt/DIY+Machines+Ident+Cleaner+-+White+Background+Larger-162w.png)
 
 ```
-A free and easy to build kinetic sand table. More information about the project is available here: https://youtu.be/Lng_AsmfBfU / https://www.diymachines.co.uk
+A free and easy to build kinetic sand table.
 
 * Integrated LED smart (WS28212b/Neopixel) lighting.
 
 * Very quiet during operation.
+
+* CoreXY style mechanism.
 
 * Detailed build instructions video available here: https://youtu.be/Lng_AsmfBfU
 
