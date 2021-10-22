@@ -35,6 +35,7 @@ A free and easy to build kinetic sand table.
 - **Micro SD Card 8Gb or higher for Raspberry Pi (x1):** https://geni.us/Micro-SD
 - **Neopixels/WS2812b on a 30 per meter roll:** https://geni.us/5mWS2812B30m
 - **12mm momentary push button (x3):** https://geni.us/MomentaryPush12mm
+- **10k potentiometers (x2):** https://geni.us/Potentiometers
 - **Some filament for the printed parts (I used PLA, including the wood infused LumberJake from 3D Jake):** https://www.3djake.com
 - **Wiring blocks - five wires (x2) and three wires (x2). I used the Wago 221 series:** https://geni.us/Wago221
 - **Mini360 Buck Converter (x1):** https://geni.us/Mini360
