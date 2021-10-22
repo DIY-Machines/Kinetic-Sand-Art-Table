@@ -29,7 +29,7 @@ A free and easy to build kinetic sand table.
 - **Stepper drivers - TMC2208 (x2):** https://geni.us/TMC2208
 - **Contact switch (x3):** https://geni.us/ContactSwitch
 - **Arduino CNC Shield (x1):** https://geni.us/ArduinoCNCShield
-- **Raspberry Pi (Zero W can cope but I recommend model 3 A+): ** https://geni.us/RaspberryPiAPlus
+- **Raspberry Pi (Zero W can cope but I recommend model 3 A+):** https://geni.us/RaspberryPiAPlus
 - **Magnets, I used three x 15x3mm and one countersunk 20x7mm all high strength:** https://geni.us/CountersunkMagnet https://geni.us/N52Magnets
 - **30mm 5V Fan (x1):** https://geni.us/30mm5vFan
 - **Micro SD Card 8Gb or higher for Raspberry Pi (x1):** https://geni.us/Micro-SD
